@@ -24,16 +24,16 @@ Python web applications running with **Meinheld** controlled by **Gunicorn** hav
 
 This applies to frameworks like **Flask** and **Django**.
 
-If you have an already existing Flask or Django application, this image can help you get more performance.
+If you have an already existing application in Flask, Django, or similar frameworks, this image will give you the best performance possible (or close to that).
 
 This image has an "auto-tuning" mechanism included, so that you can just add your code and get **good performance** automatically. And without making sacrifices (like logging).
 
 
 ### Note on performance
 
-If you are starting a new project, you might benefit from a newer (ASGI) and faster framework like [**FastAPI**](https://github.com/tiangolo/fastapi), and a Docker image like [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker).
+If you are starting a new project, you might benefit from a newer and faster framework like [**FastAPI**](https://github.com/tiangolo/fastapi) (based on ASGI instead of WSGI), and a Docker image like [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker).
 
-It would probably give you about 200% the performance of achievable with a WSGI framework (like Flask or Django).
+It would give you about 200% the performance achievable with an older WSGI framework (like Flask or Django), even when using this image.
 
 
 ## Python 2.7
@@ -57,7 +57,7 @@ But only after knowing that someone actually needs it.
 You can use **Gunicorn** to manage Meinheld and run multiple of these processes.
 
 
-### Alternatives
+## Alternatives
 
 This image was created to be an alternative to [**tiangolo/uwsgi-nginx**](https://github.com/tiangolo/uwsgi-nginx-docker).
 
