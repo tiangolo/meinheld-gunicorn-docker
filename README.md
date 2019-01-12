@@ -59,7 +59,7 @@ You can use **Gunicorn** to manage Meinheld and run multiple of these processes.
 
 ## Alternatives
 
-This image was created to be an alternative to [**tiangolo/uwsgi-nginx**](https://github.com/tiangolo/uwsgi-nginx-docker).
+This image was created to be an alternative to [**tiangolo/uwsgi-nginx**](https://github.com/tiangolo/uwsgi-nginx-docker), providing about 400% the performance of that image.
 
 And to be the base of [**tiangolo/meinheld-gunicorn-flask**](https://github.com/tiangolo/meinheld-gunicorn-flask-docker).
 
