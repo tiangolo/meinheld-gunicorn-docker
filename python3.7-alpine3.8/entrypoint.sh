@@ -19,8 +19,4 @@ else
 fi
 export GUNICORN_CONF=${GUNICORN_CONF:-$DEFAULT_GUNICORN_CONF}
 
-if [ -z "$@" ]; then
-    gunicorn -k egg:meinheld#gunicorn_worker -c "$GUNICORN_CONF" "$APP_MODULE"
-else
-    exec "$@"
-fi
+exec "$@"
