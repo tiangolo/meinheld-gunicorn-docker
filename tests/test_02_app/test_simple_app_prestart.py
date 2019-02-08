@@ -27,9 +27,7 @@ def verify_container(container, response_text):
     logs = get_logs(container)
     assert "Checking for script in /app/prestart.sh" in logs
     assert "Running script /app/prestart.sh" in logs
-    assert (
-        "Running inside /app/prestart.sh, you could add migrations to this file" in logs
-    )
+    assert "Running custom prestart.sh" in logs
     response = requests.get("http://127.0.0.1:8000")
     assert response.text == response_text
 
@@ -59,10 +57,11 @@ def verify_container(container, response_text):
         ),
     ],
 )
-def test_package_app(dockerfile, response_text):
+def test_simple_app(dockerfile, response_text):
     remove_previous_container(client)
+    IMAGE_NAME
     test_path: PurePath = Path(__file__)
-    path = test_path.parent / "package_app"
+    path = test_path.parent / "simple_app_prestart"
     client.images.build(path=str(path), dockerfile=dockerfile, tag=IMAGE_NAME)
     container = client.containers.run(
         IMAGE_NAME, name=CONTAINER_NAME, ports={"80": "8000"}, detach=True
