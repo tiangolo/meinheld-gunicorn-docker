@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/tiangolo/meinheld-gunicorn-docker.svg?branch=master)](https://travis-ci.org/tiangolo/meinheld-gunicorn-docker)
 
-
 ## Supported tags and respective `Dockerfile` links
 
 * [`python3.7`, `latest` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.7/Dockerfile)
@@ -9,15 +8,13 @@
 * [`python3.6-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.6-alpine3.8/Dockerfile)
 * [`python3.7-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.7-alpine3.8/Dockerfile)
 
-
 # meinheld-gunicorn
 
 [**Docker**](https://www.docker.com/) image with [**Meinheld**](http://meinheld.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.7** and **3.6** with performance auto-tuning. Optionally with Alpine Linux.
 
-**GitHub repo**: <https://github.com/tiangolo/meinheld-gunicorn-docker>
+**GitHub repo**: [https://github.com/tiangolo/meinheld-gunicorn-docker](https://github.com/tiangolo/meinheld-gunicorn-docker)
 
-**Docker Hub image**: <https://hub.docker.com/r/tiangolo/meinheld-gunicorn/>
-
+**Docker Hub image**: [https://hub.docker.com/r/tiangolo/meinheld-gunicorn/](https://hub.docker.com/r/tiangolo/meinheld-gunicorn/)
 
 ## Description
 
@@ -29,7 +26,6 @@ If you have an already existing application in Flask, Django, or similar framewo
 
 This image has an "auto-tuning" mechanism included, so that you can just add your code and get **good performance** automatically. And without making sacrifices (like logging).
 
-
 ### * Note on performance and features
 
 If you are starting a new project, you might benefit from a newer and faster framework like [**FastAPI**](https://github.com/tiangolo/fastapi) (based on ASGI instead of WSGI), and a Docker image like [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker).
@@ -37,7 +33,6 @@ If you are starting a new project, you might benefit from a newer and faster fra
 It would give you about 200% the performance achievable with an older WSGI framework (like Flask or Django), even when using this image.
 
 Also, if you want to use new technologies like WebSockets it would be easier with a newer framework based on ASGI, like **FastAPI**. As the standard ASGI was designed to be able to handle asynchronous code like the one needed for WebSockets.
-
 
 ## Python 2.7
 
@@ -49,23 +44,19 @@ But only after knowing that someone actually needs it.
 
 ## Technical Details
 
-
 ### Meinheld
 
 **Meinheld** is a high-performance WSGI-compliant web server.
 
-
 ### Gunicorn
 
 You can use **Gunicorn** to manage Meinheld and run multiple processes of it.
-
 
 ## Alternatives
 
 This image was created to be an alternative to [**tiangolo/uwsgi-nginx**](https://github.com/tiangolo/uwsgi-nginx-docker), providing about 400% the performance of that image.
 
 And to be the base of [**tiangolo/meinheld-gunicorn-flask**](https://github.com/tiangolo/meinheld-gunicorn-flask-docker).
-
 
 ## How to use
 
@@ -95,7 +86,6 @@ docker build -t myimage ./
 
 These are the environment variables that you can set in the container to configure it and their default values:
 
-
 #### `MODULE_NAME`
 
 The Python "module" (file) to be imported by Gunicorn, this module would contain the actual application in a variable.
@@ -110,7 +100,6 @@ For example, if your main file was at `/app/custom_app/custom_main.py`, you coul
 ```bash
 docker run -d -p 80:80 -e MODULE_NAME="custom_app.custom_main" myimage
 ```
-
 
 #### `VARIABLE_NAME`
 
@@ -137,7 +126,6 @@ In this case `api` would be the variable with the "WSGI application". You could 
 docker run -d -p 80:80 -e VARIABLE_NAME="api" myimage
 ```
 
-
 #### `APP_MODULE`
 
 The string with the Python module and the variable name passed to Gunicorn.
@@ -152,7 +140,6 @@ You can set it like:
 ```bash
 docker run -d -p 80:80 -e APP_MODULE="custom_app.custom_main:api" myimage
 ```
-
 
 #### `GUNICORN_CONF`
 
@@ -169,7 +156,6 @@ You can set it like:
 ```bash
 docker run -d -p 80:80 -e GUNICORN_CONF="/app/custom_gunicorn_conf.py" myimage
 ```
-
 
 #### `WORKERS_PER_CORE`
 
@@ -199,7 +185,6 @@ docker run -d -p 80:80 -e WORKERS_PER_CORE="0.5" myimage
 
 In a server with 8 CPU cores, this would make it start only 4 worker processes.
 
-
 #### `WEB_CONCURRENCY`
 
 Override the automatic definition of number of workers.
@@ -215,7 +200,6 @@ docker run -d -p 80:80 -e WEB_CONCURRENCY="2" myimage
 ```
 
 This would make the image start 2 worker processes, independent of how many CPU cores are available in the server.
-
 
 #### `HOST`
 
@@ -247,7 +231,6 @@ You can set it like:
 docker run -d -p 80:8080 -e PORT="8080" myimage
 ```
 
-
 #### `BIND`
 
 The actual host and port passed to Gunicorn.
@@ -255,7 +238,7 @@ The actual host and port passed to Gunicorn.
 By default, set based on the variables `HOST` and `PORT`.
 
 So, if you didn't change anything, it will be set by default to:
-    
+
 * `0.0.0.0:80`
 
 You can set it like:
@@ -263,7 +246,6 @@ You can set it like:
 ```bash
 docker run -d -p 80:8080 -e BIND="0.0.0.0:8080" myimage
 ```
-
 
 #### `LOG_LEVEL`
 
@@ -299,12 +281,11 @@ You can override it by including a file in:
 * `/app/app/gunicorn_conf.py`
 * `/gunicorn_conf.py`
 
-
 ### Custom `/app/prestart.sh`
 
-If you need to run anything before starting the app, you can add a file `prestart.sh` to the directory `/app`. The image will automatically detect and run it before starting everything. 
+If you need to run anything before starting the app, you can add a file `prestart.sh` to the directory `/app`. The image will automatically detect and run it before starting everything.
 
-For example, if you want to add Alembic SQL migrations (with SQLALchemy), you could create a `./app/prestart.sh` file in your code directory (that will be copied by your `Dockerfile`) with:
+For example, if you want to add Alembic SQL migrations (with SQLAlchemy), you could create a `./app/prestart.sh` file in your code directory (that will be copied by your `Dockerfile`) with:
 
 ```bash
 #! /usr/bin/env bash
@@ -326,11 +307,9 @@ If you need to run a Python script before starting the app, you could make the `
 python /app/my_custom_prestart_script.py
 ```
 
-
 ## Tests
 
 All the image tags, configurations, environment variables and application options are tested.
-
 
 ## Release Notes
 
@@ -343,7 +322,6 @@ All the image tags, configurations, environment variables and application option
 ### 0.1.0
 
 * Add support for `/app/prestart.sh`.
-
 
 ## License
 
