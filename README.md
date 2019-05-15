@@ -333,6 +333,10 @@ All the image tags, configurations, environment variables and application option
 
 ## Release Notes
 
+### Next Release
+
+* Upgrade Travis. PR [#5](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/5).
+
 ### 0.1.0
 
 * Add support for `/app/prestart.sh`.
