@@ -315,6 +315,8 @@ All the image tags, configurations, environment variables and application option
 
 ### Next Release
 
+### 0.2.0
+
 * Add support for Python 2.7 (you should use Python 3.7 or Python 3.6). PR [#6](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/6).
 
 * Upgrade Travis. PR [#5](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/5).
