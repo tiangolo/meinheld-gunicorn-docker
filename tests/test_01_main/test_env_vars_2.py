@@ -34,6 +34,7 @@ def verify_container(container):
 @pytest.mark.parametrize(
     "image",
     [
+        ("tiangolo/meinheld-gunicorn:python2.7"),
         ("tiangolo/meinheld-gunicorn:python3.6"),
         ("tiangolo/meinheld-gunicorn:python3.7"),
         ("tiangolo/meinheld-gunicorn:latest"),

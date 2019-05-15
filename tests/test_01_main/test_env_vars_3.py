@@ -28,6 +28,10 @@ def verify_container(container, response_text):
     "image,response_text",
     [
         (
+            "tiangolo/meinheld-gunicorn:python2.7",
+            "Hello World from a default Python 2.7 app in a Docker container, with Meinheld and Gunicorn (default)",
+        ),
+        (
             "tiangolo/meinheld-gunicorn:python3.6",
             "Hello World from a default Python 3.6 app in a Docker container, with Meinheld and Gunicorn (default)",
         ),
