@@ -3,6 +3,9 @@ services:
   latest:
     build: ./python3.7
     image: tiangolo/meinheld-gunicorn:latest
+  python2.7:
+    build: ./python2.7
+    image: tiangolo/meinheld-gunicorn:python2.7
   python3.6:
     build: ./python3.6
     image: tiangolo/meinheld-gunicorn:python3.6

@@ -36,6 +36,11 @@ def verify_container(container, response_text):
     "dockerfile,environment,response_text",
     [
         (
+            "python2.7.dockerfile",
+            {"MODULE_NAME": "custom_app.custom_main", "VARIABLE_NAME": "custom_var"},
+            "Test app. From Meinheld with Gunicorn. Using Python 2.7",
+        ),
+        (
             "python3.6.dockerfile",
             {"MODULE_NAME": "custom_app.custom_main", "VARIABLE_NAME": "custom_var"},
             "Test app. From Meinheld with Gunicorn. Using Python 3.6",
