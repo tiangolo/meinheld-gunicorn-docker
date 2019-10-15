@@ -317,6 +317,8 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+### 0.3.0
+
 * Refactor tests to use env vars and add image tags for each build date, like `tiangolo/meinheld-gunicorn:python3.7-2019-10-15`. PR [#8](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/8).
 
 ### 0.2.0
