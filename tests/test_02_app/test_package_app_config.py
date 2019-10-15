@@ -1,3 +1,4 @@
+import os
 import time
 from pathlib import Path, PurePath
 
@@ -34,36 +35,11 @@ def verify_container(container, response_text):
     assert response.text == response_text
 
 
-@pytest.mark.parametrize(
-    "dockerfile,response_text",
-    [
-        (
-            "python2.7.dockerfile",
-            "Test app. From Meinheld with Gunicorn. Using Python 2.7",
-        ),
-        (
-            "python3.6.dockerfile",
-            "Test app. From Meinheld with Gunicorn. Using Python 3.6",
-        ),
-        (
-            "python3.7.dockerfile",
-            "Test app. From Meinheld with Gunicorn. Using Python 3.7",
-        ),
-        (
-            "latest.dockerfile",
-            "Test app. From Meinheld with Gunicorn. Using Python 3.7",
-        ),
-        (
-            "python3.6-alpine3.8.dockerfile",
-            "Test app. From Meinheld with Gunicorn. Using Python 3.6",
-        ),
-        (
-            "python3.7-alpine3.8.dockerfile",
-            "Test app. From Meinheld with Gunicorn. Using Python 3.7",
-        ),
-    ],
-)
-def test_package_app_config(dockerfile, response_text):
+def test_package_app_config():
+    name = os.getenv("NAME")
+    dockerfile = f"{name}.dockerfile"
+    response_text = os.getenv("TEST_STR2")
+    sleep_time = int(os.getenv("SLEEP_TIME", 1))
     remove_previous_container(client)
     test_path: PurePath = Path(__file__)
     path = test_path.parent / "package_app_config"
@@ -71,12 +47,12 @@ def test_package_app_config(dockerfile, response_text):
     container = client.containers.run(
         IMAGE_NAME, name=CONTAINER_NAME, ports={"8000": "8000"}, detach=True
     )
-    time.sleep(1)
+    time.sleep(sleep_time)
     verify_container(container, response_text)
     container.stop()
     # Test that everything works after restarting too
     container.start()
-    time.sleep(1)
+    time.sleep(sleep_time)
     verify_container(container, response_text)
     container.stop()
     container.remove()

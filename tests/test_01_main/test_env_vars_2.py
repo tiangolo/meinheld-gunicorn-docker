@@ -1,3 +1,4 @@
+import os
 import time
 
 import docker
@@ -31,18 +32,10 @@ def verify_container(container):
     )
 
 
-@pytest.mark.parametrize(
-    "image",
-    [
-        ("tiangolo/meinheld-gunicorn:python2.7"),
-        ("tiangolo/meinheld-gunicorn:python3.6"),
-        ("tiangolo/meinheld-gunicorn:python3.7"),
-        ("tiangolo/meinheld-gunicorn:latest"),
-        ("tiangolo/meinheld-gunicorn:python3.6-alpine3.8"),
-        ("tiangolo/meinheld-gunicorn:python3.7-alpine3.8"),
-    ],
-)
 def test_env_vars_2(image):
+    name = os.getenv("NAME")
+    image = f"tiangolo/meinheld-gunicorn:{name}"
+    sleep_time = int(os.getenv("SLEEP_TIME", 1))
     remove_previous_container(client)
     container = client.containers.run(
         image,
@@ -51,12 +44,12 @@ def test_env_vars_2(image):
         ports={"80": "8000"},
         detach=True,
     )
-    time.sleep(1)
+    time.sleep(sleep_time)
     verify_container(container)
     container.stop()
     # Test that everything works after restarting too
     container.start()
-    time.sleep(1)
+    time.sleep(sleep_time)
     verify_container(container)
     container.stop()
     container.remove()
