@@ -1,3 +1,4 @@
+import os
 import time
 
 import docker
@@ -24,36 +25,11 @@ def verify_container(container, response_text):
     assert response.text == response_text
 
 
-@pytest.mark.parametrize(
-    "image,response_text",
-    [
-        (
-            "tiangolo/meinheld-gunicorn:python2.7",
-            "Hello World from a default Python 2.7 app in a Docker container, with Meinheld and Gunicorn (default)",
-        ),
-        (
-            "tiangolo/meinheld-gunicorn:python3.6",
-            "Hello World from a default Python 3.6 app in a Docker container, with Meinheld and Gunicorn (default)",
-        ),
-        (
-            "tiangolo/meinheld-gunicorn:python3.6-alpine3.8",
-            "Hello World from a default Python 3.6 app in a Docker container, with Meinheld and Gunicorn on Alpine (default)",
-        ),
-        (
-            "tiangolo/meinheld-gunicorn:python3.7",
-            "Hello World from a default Python 3.7 app in a Docker container, with Meinheld and Gunicorn (default)",
-        ),
-        (
-            "tiangolo/meinheld-gunicorn:python3.7-alpine3.8",
-            "Hello World from a default Python 3.7 app in a Docker container, with Meinheld and Gunicorn on Alpine (default)",
-        ),
-        (
-            "tiangolo/meinheld-gunicorn:latest",
-            "Hello World from a default Python 3.7 app in a Docker container, with Meinheld and Gunicorn (default)",
-        ),
-    ],
-)
-def test_env_bind(image, response_text):
+def test_env_bind():
+    name = os.getenv("NAME")
+    image = f"tiangolo/meinheld-gunicorn:{name}"
+    response_text = os.getenv("TEST_STR1")
+    sleep_time = int(os.getenv("SLEEP_TIME", 1))
     remove_previous_container(client)
     container = client.containers.run(
         image,
@@ -62,12 +38,12 @@ def test_env_bind(image, response_text):
         ports={"8080": "8000"},
         detach=True,
     )
-    time.sleep(1)
+    time.sleep(sleep_time)
     verify_container(container, response_text)
     container.stop()
     # Test that everything works after restarting too
     container.start()
-    time.sleep(1)
+    time.sleep(sleep_time)
     verify_container(container, response_text)
     container.stop()
     container.remove()
