@@ -8,6 +8,8 @@
 * [`python3.6-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.6-alpine3.8/Dockerfile)
 * [`python3.7-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.7-alpine3.8/Dockerfile)
 
+**Note**: Note: There are [tags for each build date](https://hub.docker.com/r/tiangolo/meinheld-gunicorn/tags). If you need to "pin" the Docker image version you use, you can select one of those tags. E.g. `tiangolo/meinheld-gunicorn:python3.7-2019-10-15`.
+
 # meinheld-gunicorn
 
 [**Docker**](https://www.docker.com/) image with [**Meinheld**](http://meinheld.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.7** and **3.6** with performance auto-tuning. Optionally with Alpine Linux.
@@ -313,7 +315,9 @@ All the image tags, configurations, environment variables and application option
 
 ## Release Notes
 
-### Next Release
+### Latest Changes
+
+* Refactor tests to use env vars and add image tags for each build date, like `tiangolo/meinheld-gunicorn:python3.7-2019-10-15`. PR [#8](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/8).
 
 ### 0.2.0
 
