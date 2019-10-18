@@ -309,6 +309,22 @@ If you need to run a Python script before starting the app, you could make the `
 python /app/my_custom_prestart_script.py
 ```
 
+#### `TIMEOUT`
+
+The amount of seconds gunicorn waits before a request times out.
+
+If you have requests that take a long time you can set it with this variable.
+
+By default:
+
+* `30`
+
+You can set it like:
+
+```bash
+docker run -d -p 80:8080 -e TIMEOUT="60" myimage
+```
+
 ## Tests
 
 All the image tags, configurations, environment variables and application options are tested.
