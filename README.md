@@ -2,17 +2,19 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`python3.7`, `latest` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.7/Dockerfile)
+* [`python3.8`, `latest` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.8/Dockerfile)
+* [`python3.7` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.7/Dockerfile)
 * [`python3.6` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.6/Dockerfile)
 * [`python2.7` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python2.7/Dockerfile)
 * [`python3.6-alpine3.10` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.6-alpine3.10/Dockerfile)
 * [`python3.7-alpine3.10` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.7-alpine3.10/Dockerfile)
+* [`python3.8-alpine3.10` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.8-alpine3.10/Dockerfile)
 
 **Note**: Note: There are [tags for each build date](https://hub.docker.com/r/tiangolo/meinheld-gunicorn/tags). If you need to "pin" the Docker image version you use, you can select one of those tags. E.g. `tiangolo/meinheld-gunicorn:python3.7-2019-10-15`.
 
 # meinheld-gunicorn
 
-[**Docker**](https://www.docker.com/) image with [**Meinheld**](http://meinheld.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.7** and **3.6** with performance auto-tuning. Optionally with Alpine Linux.
+[**Docker**](https://www.docker.com/) image with [**Meinheld**](http://meinheld.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.8**, **3.7** and **3.6** with performance auto-tuning. Optionally with Alpine Linux.
 
 **GitHub repo**: [https://github.com/tiangolo/meinheld-gunicorn-docker](https://github.com/tiangolo/meinheld-gunicorn-docker)
 
@@ -65,7 +67,7 @@ And to be the base of [**tiangolo/meinheld-gunicorn-flask**](https://github.com/
 * You don't need to clone the GitHub repo. You can use this image as a base image for other images, using this in your `Dockerfile`:
 
 ```Dockerfile
-FROM tiangolo/meinheld-gunicorn:python3.7
+FROM tiangolo/meinheld-gunicorn:python3.8
 
 COPY ./app /app
 ```
@@ -339,7 +341,7 @@ All the image tags, configurations, environment variables and application option
 
 ### 0.2.0
 
-* Add support for Python 2.7 (you should use Python 3.7 or Python 3.6). PR [#6](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/6).
+* Add support for Python 2.7 (you should use Python 3.X). PR [#6](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/6).
 
 * Upgrade Travis. PR [#5](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/5).
 
