@@ -2,7 +2,9 @@ FROM python:2.7
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
-RUN pip install meinheld gunicorn
+RUN apt-get update && \
+    apt-get install -y gcc && \
+    pip install meinheld gunicorn
 
 COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
