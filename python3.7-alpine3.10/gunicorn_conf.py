@@ -9,6 +9,7 @@ port = os.getenv("PORT", "80")
 bind_env = os.getenv("BIND", None)
 use_loglevel = os.getenv("LOG_LEVEL", "info")
 request_timeout = os.getenv("TIMEOUT", "30")
+secure_scheme_headers = os.getenv("SECURE_SCHEME_HEADERS", {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'})
 if bind_env:
     use_bind = bind_env
 else:

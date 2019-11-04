@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.6-slim
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
