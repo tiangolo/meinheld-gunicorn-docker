@@ -3,8 +3,9 @@ FROM python:3.6-slim
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
 RUN apt-get update && \
-    apt-get install -y gcc && \
-    pip install meinheld gunicorn
+    apt-get install --no-install-recommends -y gcc && \
+    pip install meinheld gunicorn && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
