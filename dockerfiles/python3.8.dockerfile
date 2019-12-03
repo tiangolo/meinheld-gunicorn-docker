@@ -3,7 +3,7 @@ FROM python:3.8-slim
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y gcc && \
+    apt-get install -y gcc libgcc-8-dev && \
     pip install meinheld gunicorn && \
     rm -rf /var/lib/apt/lists/*
 
