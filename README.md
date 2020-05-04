@@ -311,6 +311,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* Add Python 3.8 with Alpine 3.11. PR [#16](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/16).
 * Add support for Python 3.8. PR [#15](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/15).
 * Refactor build setup:
     * Migrate to GitHub Actions for CI.
