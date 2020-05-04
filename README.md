@@ -12,7 +12,7 @@
 
 # meinheld-gunicorn
 
-[**Docker**](https://www.docker.com/) image with [**Meinheld**](http://meinheld.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.7** and **3.6** with performance auto-tuning. Optionally with Alpine Linux.
+[**Docker**](https://www.docker.com/) image with [**Meinheld**](http://meinheld.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.6** and above and **Python 2.7**, with performance auto-tuning. Optionally with Alpine Linux.
 
 **GitHub repo**: [https://github.com/tiangolo/meinheld-gunicorn-docker](https://github.com/tiangolo/meinheld-gunicorn-docker)
 
@@ -35,14 +35,6 @@ If you are starting a new project, you might benefit from a newer and faster fra
 It would give you about 200% the performance achievable with an older WSGI framework (like Flask or Django), even when using this image.
 
 Also, if you want to use new technologies like WebSockets it would be easier with a newer framework based on ASGI, like **FastAPI**. As the standard ASGI was designed to be able to handle asynchronous code like the one needed for WebSockets.
-
-## Python 2.7
-
-Do you need support for Python 2.7?
-
-Let me know in an issue and I'll add it.
-
-But only after knowing that someone actually needs it.
 
 ## Technical Details
 
