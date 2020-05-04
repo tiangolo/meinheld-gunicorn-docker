@@ -310,6 +310,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* Add support for Python 3.8. PR [#15](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/15).
 * Refactor build setup:
     * Migrate to GitHub Actions for CI.
     * Centralize and simplify code and configs.
