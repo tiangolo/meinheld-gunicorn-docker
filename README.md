@@ -317,6 +317,13 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* Refactor build setup:
+    * Migrate to GitHub Actions for CI.
+    * Centralize and simplify code and configs.
+    * Update tests and types.
+    * Move from Pipenv to Poetry.
+    * PR [#14](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/14).
+
 ### 0.3.0
 
 * Refactor tests to use env vars and add image tags for each build date, like `tiangolo/meinheld-gunicorn:python3.7-2019-10-15`. PR [#8](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/8).
