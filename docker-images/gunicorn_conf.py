@@ -10,6 +10,11 @@ host = os.getenv("HOST", "0.0.0.0")
 port = os.getenv("PORT", "80")
 bind_env = os.getenv("BIND", None)
 use_loglevel = os.getenv("LOG_LEVEL", "info")
+
+use_access_log = os.getenv('ACCESS_LOG', None)
+use_access_log_to_file = os.getenv('ACCESS_LOG_TO_FILE', None)
+use_error_log_to_file = os.getenv('ERROR_LOG_TO_FILE', None)
+
 if bind_env:
     use_bind = bind_env
 else:
@@ -31,11 +36,29 @@ bind = use_bind
 keepalive = 120
 errorlog = "-"
 
+# access log
+accesslog = None
+if use_access_log:
+    accesslog = "-"
+    if use_access_log_to_file:
+        accesslog = "/var/log/gunicorn.access.log"
+
+# add request time to access log (T)
+access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s" "%(T)ss"'
+
+# error log
+errorlog = "-"
+if use_error_log_to_file:
+    errorlog = "/var/log/gunicorn.error.log"
+
 # For debugging and testing
 log_data = {
     "loglevel": loglevel,
     "workers": workers,
     "bind": bind,
+    "accesslog": accesslog,
+    "errorlog": errorlog,
+
     # Additional, non-gunicorn variables
     "workers_per_core": workers_per_core,
     "host": host,

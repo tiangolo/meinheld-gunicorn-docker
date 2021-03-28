@@ -2,13 +2,13 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`python3.8`, `latest` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.8.dockerfile)
-* [`python3.8-alpine3.11` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.8-alpine3.11.dockerfile)
-* [`python3.7`, _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.7.dockerfile)
-* [`python3.7-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.7-alpine3.8.dockerfile)
-* [`python3.6` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.6.dockerfile)
-* [`python3.6-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.6-alpine3.8.dockerfile)
-* [`python2.7` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python2.7.dockerfile)
+- [`python3.8`, `latest` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.8.dockerfile)
+- [`python3.8-alpine3.11` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.8-alpine3.11.dockerfile)
+- [`python3.7`, _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.7.dockerfile)
+- [`python3.7-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.7-alpine3.8.dockerfile)
+- [`python3.6` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.6.dockerfile)
+- [`python3.6-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.6-alpine3.8.dockerfile)
+- [`python2.7` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python2.7.dockerfile)
 
 **Note**: Note: There are [tags for each build date](https://hub.docker.com/r/tiangolo/meinheld-gunicorn/tags). If you need to "pin" the Docker image version you use, you can select one of those tags. E.g. `tiangolo/meinheld-gunicorn:python3.7-2019-10-15`.
 
@@ -22,7 +22,7 @@
 
 ## Description
 
-Python web applications running with **Meinheld** controlled by **Gunicorn** have some of the [best performances achievable by (older) Python frameworks](https://www.techempower.com/benchmarks/#section=test&runid=a979de55-980d-4721-a46f-77298b3f3923&hw=ph&test=fortune&l=zijzen-7) based on WSGI (synchronous code, instead of ASGI, which is asynchronous) (*).
+Python web applications running with **Meinheld** controlled by **Gunicorn** have some of the [best performances achievable by (older) Python frameworks](https://www.techempower.com/benchmarks/#section=test&runid=a979de55-980d-4721-a46f-77298b3f3923&hw=ph&test=fortune&l=zijzen-7) based on WSGI (synchronous code, instead of ASGI, which is asynchronous) (\*).
 
 This applies to frameworks like **Flask** and **Django**.
 
@@ -30,7 +30,7 @@ If you have an already existing application in Flask, Django, or similar framewo
 
 This image has an "auto-tuning" mechanism included, so that you can just add your code and get **good performance** automatically. And without making sacrifices (like logging).
 
-### * Note on performance and features
+### \* Note on performance and features
 
 If you are starting a new project, you might benefit from a newer and faster framework like [**FastAPI**](https://github.com/tiangolo/fastapi) (based on ASGI instead of WSGI), and a Docker image like [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker).
 
@@ -56,7 +56,7 @@ And to be the base of [**tiangolo/meinheld-gunicorn-flask**](https://github.com/
 
 ## How to use
 
-* You don't need to clone the GitHub repo. You can use this image as a base image for other images, using this in your `Dockerfile`:
+- You don't need to clone the GitHub repo. You can use this image as a base image for other images, using this in your `Dockerfile`:
 
 ```Dockerfile
 FROM tiangolo/meinheld-gunicorn:python3.7
@@ -88,8 +88,8 @@ The Python "module" (file) to be imported by Gunicorn, this module would contain
 
 By default:
 
-* `app.main` if there's a file `/app/app/main.py` or
-* `main` if there's a file `/app/main.py`
+- `app.main` if there's a file `/app/app/main.py` or
+- `main` if there's a file `/app/main.py`
 
 For example, if your main file was at `/app/custom_app/custom_main.py`, you could set it like:
 
@@ -103,7 +103,7 @@ The variable inside of the Python module that contains the WSGI application.
 
 By default:
 
-* `app`
+- `app`
 
 For example, if your main Python file has something like:
 
@@ -128,8 +128,8 @@ The string with the Python module and the variable name passed to Gunicorn.
 
 By default, set based on the variables `MODULE_NAME` and `VARIABLE_NAME`:
 
-* `app.main:app` or
-* `main:app`
+- `app.main:app` or
+- `main:app`
 
 You can set it like:
 
@@ -143,9 +143,9 @@ The path to a Gunicorn Python configuration file.
 
 By default:
 
-* `/app/gunicorn_conf.py` if it exists
-* `/app/app/gunicorn_conf.py` if it exists
-* `/gunicorn_conf.py` (the included default)
+- `/app/gunicorn_conf.py` if it exists
+- `/app/app/gunicorn_conf.py` if it exists
+- `/gunicorn_conf.py` (the included default)
 
 You can set it like:
 
@@ -161,7 +161,7 @@ It will set the number of workers to the number of CPU cores multiplied by this 
 
 By default:
 
-* `2`
+- `2`
 
 You can set it like:
 
@@ -187,7 +187,7 @@ Override the automatic definition of number of workers.
 
 By default:
 
-* Set to the number of CPU cores in the current server multiplied by the environment variable `WORKERS_PER_CORE`. So, in a server with 2 cores, by default it will be set to `4`.
+- Set to the number of CPU cores in the current server multiplied by the environment variable `WORKERS_PER_CORE`. So, in a server with 2 cores, by default it will be set to `4`.
 
 You can set it like:
 
@@ -209,7 +209,7 @@ It's is provided for completeness, but you probably shouldn't change it.
 
 By default:
 
-* `0.0.0.0`
+- `0.0.0.0`
 
 #### `PORT`
 
@@ -219,7 +219,7 @@ If you are running your container in a restrictive environment that forces you t
 
 By default:
 
-* `80`
+- `80`
 
 You can set it like:
 
@@ -235,7 +235,7 @@ By default, set based on the variables `HOST` and `PORT`.
 
 So, if you didn't change anything, it will be set by default to:
 
-* `0.0.0.0:80`
+- `0.0.0.0:80`
 
 You can set it like:
 
@@ -249,11 +249,11 @@ The log level for Gunicorn.
 
 One of:
 
-* `debug`
-* `info`
-* `warning`
-* `error`
-* `critical`
+- `debug`
+- `info`
+- `warning`
+- `error`
+- `critical`
 
 By default, set to `info`.
 
@@ -265,6 +265,52 @@ You can set it like:
 docker run -d -p 80:8080 -e LOG_LEVEL="warning" myimage
 ```
 
+### `ACCESS_LOG`
+
+Enable access log for Gunicorn
+
+If you don't need access logs then **don't set this variable**.
+
+You can set it like:
+
+```bash
+docker run -d -p 80:8080 -e ACCESS_LOG="yes" myimage
+```
+
+### `ACCESS_LOG_TO_FILE`
+
+Enable writing access log to file.
+
+By default, access logs will output to `stdout` if variable `ACCESS_LOG` is set.
+
+So this will send logs to `/var/log/gunicorn.access.log`.
+
+You can set it like:
+
+```bash
+docker run -d -p 80:8080 -e ACCESS_LOG="yes" -e ACCESS_LOG_TO_FILE="yes" myimage
+```
+
+You might need to mount a volume to the logs like this:
+
+```bash
+docker run -d -p 80:8080 -e ACCESS_LOG="yes" -e ACCESS_LOG_TO_FILE="yes" -v /logs:/var/log/ myimage
+```
+
+### `ERROR_LOG_TO_FILE`
+
+Enable writing error logs to file.
+
+By default, error logs will output to `stderr`.
+
+So this will send logs to `/var/log/gunicorn.error.log`.
+
+You can set it like:
+
+```bash
+docker run -d -p 80:8080  -e ERROR_LOG_TO_FILE="yes" myimage
+```
+
 ### Custom Gunicorn configuration file
 
 The image includes a default Gunicorn Python config file at `/gunicorn_conf.py`.
@@ -273,9 +319,9 @@ It uses the environment variables declared above to set all the configurations.
 
 You can override it by including a file in:
 
-* `/app/gunicorn_conf.py`
-* `/app/app/gunicorn_conf.py`
-* `/gunicorn_conf.py`
+- `/app/gunicorn_conf.py`
+- `/app/app/gunicorn_conf.py`
+- `/gunicorn_conf.py`
 
 ### Custom `/app/prestart.sh`
 
@@ -311,29 +357,29 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
-* 👷 Add latest-changes GitHub Action, update issue-manager, and add sponsors funding. PR [#21](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/21) by [@tiangolo](https://github.com/tiangolo).
-* Add Python 3.8 with Alpine 3.11. PR [#16](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/16).
-* Add support for Python 3.8. PR [#15](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/15).
-* Refactor build setup:
-    * Migrate to GitHub Actions for CI.
-    * Centralize and simplify code and configs.
-    * Update tests and types.
-    * Move from Pipenv to Poetry.
-    * PR [#14](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/14).
+- 👷 Add latest-changes GitHub Action, update issue-manager, and add sponsors funding. PR [#21](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/21) by [@tiangolo](https://github.com/tiangolo).
+- Add Python 3.8 with Alpine 3.11. PR [#16](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/16).
+- Add support for Python 3.8. PR [#15](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/15).
+- Refactor build setup:
+  - Migrate to GitHub Actions for CI.
+  - Centralize and simplify code and configs.
+  - Update tests and types.
+  - Move from Pipenv to Poetry.
+  - PR [#14](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/14).
 
 ### 0.3.0
 
-* Refactor tests to use env vars and add image tags for each build date, like `tiangolo/meinheld-gunicorn:python3.7-2019-10-15`. PR [#8](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/8).
+- Refactor tests to use env vars and add image tags for each build date, like `tiangolo/meinheld-gunicorn:python3.7-2019-10-15`. PR [#8](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/8).
 
 ### 0.2.0
 
-* Add support for Python 2.7 (you should use Python 3.7 or Python 3.6). PR [#6](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/6).
+- Add support for Python 2.7 (you should use Python 3.7 or Python 3.6). PR [#6](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/6).
 
-* Upgrade Travis. PR [#5](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/5).
+- Upgrade Travis. PR [#5](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/5).
 
 ### 0.1.0
 
-* Add support for `/app/prestart.sh`.
+- Add support for `/app/prestart.sh`.
 
 ## License
 
