@@ -61,7 +61,7 @@ And to be the base of [**tiangolo/meinheld-gunicorn-flask**](https://github.com/
 * You don't need to clone the GitHub repo. You can use this image as a base image for other images, using this in your `Dockerfile`:
 
 ```Dockerfile
-FROM tiangolo/meinheld-gunicorn:python3.7
+FROM tiangolo/meinheld-gunicorn:python3.9
 
 COPY ./app /app
 ```
