@@ -2,8 +2,10 @@ FROM python:3.9-alpine3.13
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
+COPY requirements.txt /tmp/requirements.txt
+
 RUN apk add --no-cache --virtual .build-deps gcc libc-dev \
-    && pip install meinheld gunicorn \
+    && pip install -r /tmp/requirements.txt \
     && apk del .build-deps gcc libc-dev
 
 COPY ./entrypoint.sh /entrypoint.sh
