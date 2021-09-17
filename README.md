@@ -313,6 +313,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* 👷 Update Latest Changes GitHub Action. PR [#37](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/37) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add Dependabot and external requirements to get automated upgrade PRs. PR [#29](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/29) by [@tiangolo](https://github.com/tiangolo).
 * ✨ Add support for Python 3.9 and Python 3.9 Alpine. PR [#24](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/24) by [@gv-collibris](https://github.com/gv-collibris).
 * 👷 Add latest-changes GitHub Action, update issue-manager, and add sponsors funding. PR [#21](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/21) by [@tiangolo](https://github.com/tiangolo).
