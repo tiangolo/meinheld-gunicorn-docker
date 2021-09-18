@@ -313,6 +313,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* ✏️ Fix typo duplicate "Note" in Readme. PR [#39](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/39) by [@tiangolo](https://github.com/tiangolo).
 * ♻️ Add pip flag `--no-cache-dir` to reduce disk size used. PR [#38](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/38) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update Latest Changes GitHub Action. PR [#37](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/37) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add Dependabot and external requirements to get automated upgrade PRs. PR [#29](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/29) by [@tiangolo](https://github.com/tiangolo).
