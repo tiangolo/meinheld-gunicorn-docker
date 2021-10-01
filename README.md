@@ -389,6 +389,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* 📝 Add Kubernetes warning, when to use this image. PR [#40](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/40) by [@tiangolo](https://github.com/tiangolo).
 * ✏️ Fix typo duplicate "Note" in Readme. PR [#39](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/39) by [@tiangolo](https://github.com/tiangolo).
 * ♻️ Add pip flag `--no-cache-dir` to reduce disk size used. PR [#38](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/38) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update Latest Changes GitHub Action. PR [#37](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/37) by [@tiangolo](https://github.com/tiangolo).
