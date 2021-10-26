@@ -417,6 +417,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* 🔥 Remove unnecessary Travis backup file. PR [#45](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/45) by [@tiangolo](https://github.com/tiangolo).
 * 📝 Add note to discourage Alpine with Python. PR [#42](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/42) by [@tiangolo](https://github.com/tiangolo).
 * 🔥 Remove support for Python 2.7. PR [#41](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/41) by [@tiangolo](https://github.com/tiangolo).
 * 📝 Add Kubernetes warning, when to use this image. PR [#40](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/40) by [@tiangolo](https://github.com/tiangolo).
