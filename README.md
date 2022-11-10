@@ -417,6 +417,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* ⬆️ Update docker requirement from ^4.2.0 to ^5.0.3. PR [#43](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/43) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Update isort requirement from ^4.3.21 to ^5.8.0. PR [#32](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/32) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Update mypy requirement from ^0.770 to ^0.971. PR [#69](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/69) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * :arrow_up: Bump actions/checkout from 2 to 3.1.0. PR [#70](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/70) by [@dependabot[bot]](https://github.com/apps/dependabot).
