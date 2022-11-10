@@ -417,6 +417,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* ⬆️ Update pytest requirement from ^5.4.1 to ^7.0.1. PR [#55](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/55) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Update black requirement from ^19.10b0 to ^20.8b1. PR [#35](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/35) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR [#30](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/30) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Bump actions/setup-python from 1 to 4.3.0. PR [#71](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/71) by [@dependabot[bot]](https://github.com/apps/dependabot).
