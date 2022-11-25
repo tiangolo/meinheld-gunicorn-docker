@@ -429,6 +429,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* ⬆️ Update autoflake requirement from ^1.3.1 to ^2.0.0. PR [#77](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/77) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 📝 Add note about why Python 3.10 and 3.11 are note supported. PR [#83](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/83) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Upgrade CI OS. PR [#81](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/81) by [@tiangolo](https://github.com/tiangolo).
 * 🔧 Update Dependabot config. PR [#76](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/76) by [@tiangolo](https://github.com/tiangolo).
