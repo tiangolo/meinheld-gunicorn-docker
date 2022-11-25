@@ -429,14 +429,45 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+
+### 0.4.0
+
+Highlights of this release:
+
+* Support for Python 3.9 and 3.8.
+* Deprecation of Python 3.6 and 2.7.
+    * The last Python 3.6 and 2.7 images are available in Docker Hub, but they won't be updated or maintained anymore.
+    * The last images with a date tag are `python3.6-2022-11-25` and `python2.7-2022-11-25`.
+* Upgraded versions of all the dependencies.
+* Small improvements and fixes.
+
+#### Features
+
+* ♻️ Add pip flag `--no-cache-dir` to reduce disk size used. PR [#38](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/38) by [@tiangolo](https://github.com/tiangolo).
+* ✨ Add support for Python 3.9 and Python 3.9 Alpine. PR [#24](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/24) by [@gv-collibris](https://github.com/gv-collibris).
+* Add Python 3.8 with Alpine 3.11. PR [#16](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/16).
+* Add support for Python 3.8. PR [#15](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/15).
+
+#### Breaking Changes
+
+* 🔥 Deprecate and remove Python 3.6 and Python 2.7. PR [#75](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/75) by [@tiangolo](https://github.com/tiangolo).
+* 🔥 Remove support for Python 2.7. PR [#41](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/41) by [@tiangolo](https://github.com/tiangolo).
+
+#### Docs
+
+* 📝 Add note about why Python 3.10 and 3.11 are note supported. PR [#83](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/83) by [@tiangolo](https://github.com/tiangolo).
+* 📝 Add note to discourage Alpine with Python. PR [#42](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/42) by [@tiangolo](https://github.com/tiangolo).
+* 📝 Add Kubernetes warning, when to use this image. PR [#40](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/40) by [@tiangolo](https://github.com/tiangolo).
+* ✏️ Fix typo duplicate "Note" in Readme. PR [#39](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/39) by [@tiangolo](https://github.com/tiangolo).
+
+#### Internal
+
 * ⬆️ Update mypy requirement from ^0.971 to ^0.991. PR [#80](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/80) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Update black requirement from ^20.8b1 to ^22.10. PR [#79](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/79) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Update docker requirement from ^5.0.3 to ^6.0.1. PR [#78](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/78) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Update autoflake requirement from ^1.3.1 to ^2.0.0. PR [#77](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/77) by [@dependabot[bot]](https://github.com/apps/dependabot).
-* 📝 Add note about why Python 3.10 and 3.11 are note supported. PR [#83](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/83) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Upgrade CI OS. PR [#81](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/81) by [@tiangolo](https://github.com/tiangolo).
 * 🔧 Update Dependabot config. PR [#76](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/76) by [@tiangolo](https://github.com/tiangolo).
-* 🔥 Deprecate and remove Python 3.6 and Python 2.7. PR [#75](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/75) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add scheduled CI. PR [#74](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/74) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add alls-green GitHub Action. PR [#73](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/73) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Do not run double CI for PRs, run on push only on master. PR [#72](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/72) by [@tiangolo](https://github.com/tiangolo).
@@ -449,17 +480,9 @@ All the image tags, configurations, environment variables and application option
 * ⬆️ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR [#30](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/30) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Bump actions/setup-python from 1 to 4.3.0. PR [#71](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/71) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔥 Remove unnecessary Travis backup file. PR [#45](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/45) by [@tiangolo](https://github.com/tiangolo).
-* 📝 Add note to discourage Alpine with Python. PR [#42](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/42) by [@tiangolo](https://github.com/tiangolo).
-* 🔥 Remove support for Python 2.7. PR [#41](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/41) by [@tiangolo](https://github.com/tiangolo).
-* 📝 Add Kubernetes warning, when to use this image. PR [#40](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/40) by [@tiangolo](https://github.com/tiangolo).
-* ✏️ Fix typo duplicate "Note" in Readme. PR [#39](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/39) by [@tiangolo](https://github.com/tiangolo).
-* ♻️ Add pip flag `--no-cache-dir` to reduce disk size used. PR [#38](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/38) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update Latest Changes GitHub Action. PR [#37](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/37) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add Dependabot and external requirements to get automated upgrade PRs. PR [#29](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/29) by [@tiangolo](https://github.com/tiangolo).
-* ✨ Add support for Python 3.9 and Python 3.9 Alpine. PR [#24](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/24) by [@gv-collibris](https://github.com/gv-collibris).
 * 👷 Add latest-changes GitHub Action, update issue-manager, and add sponsors funding. PR [#21](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/21) by [@tiangolo](https://github.com/tiangolo).
-* Add Python 3.8 with Alpine 3.11. PR [#16](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/16).
-* Add support for Python 3.8. PR [#15](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/15).
 * Refactor build setup:
     * Migrate to GitHub Actions for CI.
     * Centralize and simplify code and configs.
