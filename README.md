@@ -429,6 +429,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* ⬆️ Update black requirement from ^20.8b1 to ^22.10. PR [#79](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/79) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Update docker requirement from ^5.0.3 to ^6.0.1. PR [#78](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/78) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Update autoflake requirement from ^1.3.1 to ^2.0.0. PR [#77](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/77) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 📝 Add note about why Python 3.10 and 3.11 are note supported. PR [#83](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/83) by [@tiangolo](https://github.com/tiangolo).
