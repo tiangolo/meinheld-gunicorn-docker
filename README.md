@@ -417,6 +417,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* 👷 Add scheduled CI. PR [#74](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/74) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add alls-green GitHub Action. PR [#73](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/73) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Do not run double CI for PRs, run on push only on master. PR [#72](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/72) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Update docker requirement from ^4.2.0 to ^5.0.3. PR [#43](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/43) by [@dependabot[bot]](https://github.com/apps/dependabot).
