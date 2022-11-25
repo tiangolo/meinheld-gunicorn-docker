@@ -425,6 +425,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* 🔧 Update Dependabot config. PR [#76](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/76) by [@tiangolo](https://github.com/tiangolo).
 * 🔥 Deprecate and remove Python 3.6 and Python 2.7. PR [#75](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/75) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add scheduled CI. PR [#74](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/74) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add alls-green GitHub Action. PR [#73](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/73) by [@tiangolo](https://github.com/tiangolo).
