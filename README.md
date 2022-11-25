@@ -14,11 +14,19 @@
 * [`python3.7-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.7-alpine3.8.dockerfile)
 * [`python3.6-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.6-alpine3.8.dockerfile)
 
-## Deprecated
+## Deprecated tags
 
-These tags are no longer supported:
+🚨 These tags are no longer supported or maintained, they are removed from the GitHub repository, but the last version pushed is still available in Docker Hub.
 
-* [`python2.7` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python2.7.dockerfile)
+* `python3.6`
+* `python3.6-alpine3.8`
+* `python2.7`
+
+The last date tags for deprecated Python versions are:
+
+* `python3.6-2022-11-25`
+* `python3.6-alpine3.8-2022-11-25`
+* `python2.7-2022-11-25`
 
 ---
 
