@@ -429,6 +429,7 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* ⬆️ Update mypy requirement from ^0.991 to ^1.1. PR [#91](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/91) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Bump actions/setup-python from 4.3.0 to 4.5.0. PR [#87](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/87) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update latest changes token. PR [#94](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/94) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add GitHub Action for Docker Hub description. PR [#84](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/84) by [@tiangolo](https://github.com/tiangolo).
