@@ -437,6 +437,7 @@ All the image tags, configurations, environment variables and application option
 
 #### Internal
 
+* 👷 Update dependabot. PR [#103](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/103) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update latest-changes GitHub Action. PR [#102](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/102) by [@tiangolo](https://github.com/tiangolo).
 
 ### 0.4.0
