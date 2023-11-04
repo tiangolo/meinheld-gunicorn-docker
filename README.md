@@ -435,6 +435,10 @@ All the image tags, configurations, environment variables and application option
 * 👷 Update latest changes token. PR [#94](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/94) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add GitHub Action for Docker Hub description. PR [#84](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/84) by [@tiangolo](https://github.com/tiangolo).
 
+#### Internal
+
+* 👷 Update latest-changes GitHub Action. PR [#102](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/102) by [@tiangolo](https://github.com/tiangolo).
+
 ### 0.4.0
 
 Highlights of this release:
