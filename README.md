@@ -448,6 +448,7 @@ All the image tags, configurations, environment variables and application option
 
 #### Docs
 
+* 📝 Update test badge in `README.md`. PR [#113](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/113) by [@alejsdev](https://github.com/alejsdev).
 * 📝 Update test badge in `README.md`. PR [#112](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/112) by [@alejsdev](https://github.com/alejsdev).
 
 #### Internal
