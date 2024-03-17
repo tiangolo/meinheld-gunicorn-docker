@@ -446,6 +446,10 @@ All the image tags, configurations, environment variables and application option
 
 * ⬆️ Bump gunicorn from 20.1.0 to 21.2.0. PR [#99](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/99) by [@dependabot[bot]](https://github.com/apps/dependabot).
 
+#### Docs
+
+* 📝 Update test badge in `README.md`. PR [#112](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/112) by [@alejsdev](https://github.com/alejsdev).
+
 #### Internal
 
 * ⬆ Bump actions/setup-python from 4.5.0 to 5.0.0. PR [#105](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/105) by [@dependabot[bot]](https://github.com/apps/dependabot).
