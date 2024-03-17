@@ -18,6 +18,7 @@ jobs:
       matrix:
         image:
           - name: latest
+            python_version: "3.9"
           - name: python3.9
             python_version: "3.9"
           - name: python3.8
