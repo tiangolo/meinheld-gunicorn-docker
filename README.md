@@ -438,6 +438,10 @@ All the image tags, configurations, environment variables and application option
 
 * 🔥 Remove Alpine suppport. PR [#110](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/110) by [@tiangolo](https://github.com/tiangolo).
 
+#### Upgrades
+
+* ⬆️ Bump gunicorn from 20.1.0 to 21.2.0. PR [#99](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/99) by [@dependabot[bot]](https://github.com/apps/dependabot).
+
 #### Internal
 
 * ⬆ Bump actions/setup-python from 4.5.0 to 5.0.0. PR [#105](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/105) by [@dependabot[bot]](https://github.com/apps/dependabot).
