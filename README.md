@@ -434,6 +434,10 @@ All the image tags, configurations, environment variables and application option
 * 👷 Update latest changes token. PR [#94](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/94) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add GitHub Action for Docker Hub description. PR [#84](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/84) by [@tiangolo](https://github.com/tiangolo).
 
+#### Refactors
+
+* 🔥 Remove Alpine suppport. PR [#110](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/110) by [@tiangolo](https://github.com/tiangolo).
+
 #### Internal
 
 * 👷 Update dependabot. PR [#103](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/103) by [@tiangolo](https://github.com/tiangolo).
