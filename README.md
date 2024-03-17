@@ -440,6 +440,7 @@ All the image tags, configurations, environment variables and application option
 
 #### Internal
 
+* ⬆ Bump tiangolo/issue-manager from 0.4.0 to 0.5.0. PR [#108](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/108) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update dependabot. PR [#103](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/103) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update latest-changes GitHub Action. PR [#102](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/102) by [@tiangolo](https://github.com/tiangolo).
 
