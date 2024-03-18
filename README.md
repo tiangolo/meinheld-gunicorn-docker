@@ -428,6 +428,8 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+### 0.5.0
+
 #### Features
 
 * ✨ Add support for multi-arch builds, including support for arm64 (e.g. Mac M1). PR [#111](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/111) by [@tiangolo](https://github.com/tiangolo).
