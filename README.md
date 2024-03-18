@@ -428,12 +428,6 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
-* ⬆️ Update black requirement from ^22.10 to ^23.1. PR [#89](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/89) by [@dependabot[bot]](https://github.com/apps/dependabot).
-* ⬆️ Update mypy requirement from ^0.991 to ^1.1. PR [#91](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/91) by [@dependabot[bot]](https://github.com/apps/dependabot).
-* ⬆️ Bump actions/setup-python from 4.3.0 to 4.5.0. PR [#87](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/87) by [@dependabot[bot]](https://github.com/apps/dependabot).
-* 👷 Update latest changes token. PR [#94](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/94) by [@tiangolo](https://github.com/tiangolo).
-* 👷 Add GitHub Action for Docker Hub description. PR [#84](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/84) by [@tiangolo](https://github.com/tiangolo).
-
 #### Features
 
 * ✨ Add support for multi-arch builds, including support for arm64 (e.g. Mac M1). PR [#111](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/111) by [@tiangolo](https://github.com/tiangolo).
@@ -453,6 +447,11 @@ All the image tags, configurations, environment variables and application option
 
 #### Internal
 
+* ⬆️ Update black requirement from ^22.10 to ^23.1. PR [#89](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/89) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆️ Update mypy requirement from ^0.991 to ^1.1. PR [#91](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/91) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆️ Bump actions/setup-python from 4.3.0 to 4.5.0. PR [#87](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/87) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* 👷 Update latest changes token. PR [#94](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/94) by [@tiangolo](https://github.com/tiangolo).
+* 👷 Add GitHub Action for Docker Hub description. PR [#84](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/84) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump actions/setup-python from 4.5.0 to 5.0.0. PR [#105](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/105) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump peter-evans/dockerhub-description from 3 to 4. PR [#107](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/107) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Bump actions/checkout from 3 to 4. PR [#100](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/100) by [@dependabot[bot]](https://github.com/apps/dependabot).
