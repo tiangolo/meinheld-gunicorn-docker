@@ -1,4 +1,4 @@
-[![Test](https://github.com/tiangolo/meinheld-gunicorn-docker/workflows/Test/badge.svg)](https://github.com/tiangolo/meinheld-gunicorn-docker/actions?query=workflow%3ATest) [![Deploy](https://github.com/tiangolo/meinheld-gunicorn-docker/workflows/Deploy/badge.svg)](https://github.com/tiangolo/meinheld-gunicorn-docker/actions?query=workflow%3ADeploy)
+[![Test](https://github.com/tiangolo/meinheld-gunicorn-docker/actions/workflows/test.yml/badge.svg)](https://github.com/tiangolo/meinheld-gunicorn-docker/actions/workflows/test.yml) [![Deploy](https://github.com/tiangolo/meinheld-gunicorn-docker/workflows/Deploy/badge.svg)](https://github.com/tiangolo/meinheld-gunicorn-docker/actions?query=workflow%3ADeploy)
 
 ## Supported tags and respective `Dockerfile` links
 
@@ -7,23 +7,22 @@
 * [`python3.7`, _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.7.dockerfile)
 * [`python3.6` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.6.dockerfile)
 
-## Discouraged tags
-
-* [`python3.9-alpine3.13` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.9-alpine3.13.dockerfile)
-* [`python3.8-alpine3.11` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.8-alpine3.11.dockerfile)
-* [`python3.7-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.7-alpine3.8.dockerfile)
-* [`python3.6-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.6-alpine3.8.dockerfile)
-
 ## Deprecated tags
 
-🚨 These tags are no longer supported or maintained, they are removed from the GitHub repository, but the last version pushed is still available in Docker Hub.
+🚨 These tags are no longer supported or maintained, they are removed from the GitHub repository, but the last versions pushed might still be available in Docker Hub if anyone has been pulling them:
 
+* `python3.9-alpine3.13`
+* `python3.8-alpine3.11`
+* `python3.7-alpine3.8`
 * `python3.6`
 * `python3.6-alpine3.8`
 * `python2.7`
 
-The last date tags for deprecated Python versions are:
+The last date tags for these versions are:
 
+* `python3.9-alpine3.13-2024-03-11`
+* `python3.8-alpine3.11-2024-03-11`
+* `python3.7-alpine3.8-2024-03-11`
 * `python3.6-2022-11-25`
 * `python3.6-alpine3.8-2022-11-25`
 * `python2.7-2022-11-25`
@@ -34,7 +33,7 @@ The last date tags for deprecated Python versions are:
 
 # meinheld-gunicorn
 
-[**Docker**](https://www.docker.com/) image with [**Meinheld**](http://meinheld.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/)**, with performance auto-tuning. Optionally with Alpine Linux.
+[**Docker**](https://www.docker.com/) image with [**Meinheld**](http://meinheld.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/)**, with performance auto-tuning.
 
 **GitHub repo**: [https://github.com/tiangolo/meinheld-gunicorn-docker](https://github.com/tiangolo/meinheld-gunicorn-docker)
 
@@ -429,14 +428,41 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+#### Internal
+
+* 🔧 Add GitHub templates for discussions and issues, and security policy. PR [#120](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/120) by [@alejsdev](https://github.com/alejsdev).
+* 🔧 Update `latest-changes.yml`. PR [#114](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/114) by [@alejsdev](https://github.com/alejsdev).
+
+### 0.5.0
+
+#### Features
+
+* ✨ Add support for multi-arch builds, including support for arm64 (e.g. Mac M1). PR [#111](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/111) by [@tiangolo](https://github.com/tiangolo).
+
+#### Refactors
+
+* 🔥 Remove Alpine suppport. PR [#110](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/110) by [@tiangolo](https://github.com/tiangolo).
+
+#### Upgrades
+
+* ⬆️ Bump gunicorn from 20.1.0 to 21.2.0. PR [#99](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/99) by [@dependabot[bot]](https://github.com/apps/dependabot).
+
+#### Docs
+
+* 📝 Update test badge in `README.md`. PR [#113](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/113) by [@alejsdev](https://github.com/alejsdev).
+* 📝 Update test badge in `README.md`. PR [#112](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/112) by [@alejsdev](https://github.com/alejsdev).
+
+#### Internal
+
 * ⬆️ Update black requirement from ^22.10 to ^23.1. PR [#89](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/89) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Update mypy requirement from ^0.991 to ^1.1. PR [#91](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/91) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆️ Bump actions/setup-python from 4.3.0 to 4.5.0. PR [#87](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/87) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update latest changes token. PR [#94](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/94) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add GitHub Action for Docker Hub description. PR [#84](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/84) by [@tiangolo](https://github.com/tiangolo).
-
-#### Internal
-
+* ⬆ Bump actions/setup-python from 4.5.0 to 5.0.0. PR [#105](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/105) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆ Bump peter-evans/dockerhub-description from 3 to 4. PR [#107](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/107) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆️ Bump actions/checkout from 3 to 4. PR [#100](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/100) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆ Bump tiangolo/issue-manager from 0.4.0 to 0.5.0. PR [#108](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/108) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update dependabot. PR [#103](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/103) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update latest-changes GitHub Action. PR [#102](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/102) by [@tiangolo](https://github.com/tiangolo).
 
