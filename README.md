@@ -428,6 +428,10 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+#### Features
+
+* 👷 Avoid creating unnecessary `*.pyc` files with `PYTHONDONTWRITEBYTECODE=1` and ensure logs are printed immediately with `PYTHONUNBUFFERED=1`. PR [#109](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/109) by [@estebanx64](https://github.com/estebanx64).
+
 #### Internal
 
 * 🔧 Add GitHub templates for discussions and issues, and security policy. PR [#120](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/120) by [@alejsdev](https://github.com/alejsdev).
