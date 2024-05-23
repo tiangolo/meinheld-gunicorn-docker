@@ -434,6 +434,7 @@ All the image tags, configurations, environment variables and application option
 
 #### Internal
 
+* ⬆ Bump docker/build-push-action from 2 to 5. PR [#115](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/115) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔧 Add GitHub templates for discussions and issues, and security policy. PR [#120](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/120) by [@alejsdev](https://github.com/alejsdev).
 * 🔧 Update `latest-changes.yml`. PR [#114](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/114) by [@alejsdev](https://github.com/alejsdev).
 
