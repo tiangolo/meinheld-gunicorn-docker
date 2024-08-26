@@ -434,6 +434,7 @@ All the image tags, configurations, environment variables and application option
 
 #### Internal
 
+* 👷 Update `latest-changes` GitHub Action. PR [#126](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/126) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update issue-manager.yml GitHub Action permissions. PR [#124](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/124) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump gunicorn from 21.2.0 to 22.0.0. PR [#122](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/122) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump docker/login-action from 1 to 3. PR [#118](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/118) by [@dependabot[bot]](https://github.com/apps/dependabot).
