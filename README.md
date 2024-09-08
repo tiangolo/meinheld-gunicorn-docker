@@ -432,6 +432,10 @@ All the image tags, configurations, environment variables and application option
 
 * 👷 Avoid creating unnecessary `*.pyc` files with `PYTHONDONTWRITEBYTECODE=1` and ensure logs are printed immediately with `PYTHONUNBUFFERED=1`. PR [#109](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/109) by [@estebanx64](https://github.com/estebanx64).
 
+#### Refactors
+
+* ♻️ Do not add `EXPOSE 80` by default as the port can be changed. PR [#128](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/128) by [@tiangolo](https://github.com/tiangolo).
+
 #### Internal
 
 * 👷 Update `issue-manager.yml`. PR [#127](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/127) by [@tiangolo](https://github.com/tiangolo).
