@@ -438,6 +438,7 @@ All the image tags, configurations, environment variables and application option
 
 #### Internal
 
+* ⬆ Bump gunicorn from 22.0.0 to 23.0.0. PR [#125](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/125) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump docker/build-push-action from 5 to 6. PR [#123](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/123) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update `issue-manager.yml`. PR [#127](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/127) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update `latest-changes` GitHub Action. PR [#126](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/126) by [@tiangolo](https://github.com/tiangolo).
