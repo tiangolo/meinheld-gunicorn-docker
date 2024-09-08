@@ -18,8 +18,6 @@ WORKDIR /app/
 
 ENV PYTHONPATH=/app
 
-EXPOSE 80
-
 ENTRYPOINT ["/entrypoint.sh"]
 
 # Run the start script, it will check for an /app/prestart.sh script (e.g. for migrations)
