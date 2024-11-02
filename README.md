@@ -429,6 +429,8 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+* 🔥 Drop support for Python 3.7 and 3.8. PR [#138](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/138) by [@tiangolo](https://github.com/tiangolo).
+
 #### Features
 
 * 👷 Avoid creating unnecessary `*.pyc` files with `PYTHONDONTWRITEBYTECODE=1` and ensure logs are printed immediately with `PYTHONUNBUFFERED=1`. PR [#109](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/109) by [@estebanx64](https://github.com/estebanx64).
