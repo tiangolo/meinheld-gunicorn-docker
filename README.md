@@ -1,3 +1,9 @@
+## DEPRECATED 🚨
+
+This Docker image is now deprecated. Read about it below.
+
+---
+
 [![Test](https://github.com/tiangolo/meinheld-gunicorn-docker/actions/workflows/test.yml/badge.svg)](https://github.com/tiangolo/meinheld-gunicorn-docker/actions/workflows/test.yml) [![Deploy](https://github.com/tiangolo/meinheld-gunicorn-docker/workflows/Deploy/badge.svg)](https://github.com/tiangolo/meinheld-gunicorn-docker/actions?query=workflow%3ADeploy)
 
 ## Supported tags and respective `Dockerfile` links
@@ -50,18 +56,6 @@ If you have an already existing application in Flask, Django, or similar framewo
 
 This image has an "auto-tuning" mechanism included, so that you can just add your code and get **good performance** automatically. And without making sacrifices (like logging).
 
-## Note Python 3.10 and 3.11
-
-The current latest version of Meinheld released is 1.0.2, from May 17, 2020. This version of Meinheld requires an old version of Greenlet (`>=0.4.5,<0.5`) that is not compatible with Python 3.10 and 3.11. That's why the latest version of Python supported in this image is Python 3.9.
-
-### * Note on performance and features
-
-If you are starting a new project, you might benefit from a newer and faster framework like [**FastAPI**](https://github.com/tiangolo/fastapi) (based on ASGI instead of WSGI), and a Docker image like [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker).
-
-It would give you about 200% the performance achievable with an older WSGI framework (like Flask or Django), even when using this image.
-
-Also, if you want to use new technologies like WebSockets it would be easier with a newer framework based on ASGI, like **FastAPI**. As the standard ASGI was designed to be able to handle asynchronous code like the one needed for WebSockets.
-
 ## Technical Details
 
 ### Meinheld
@@ -78,7 +72,7 @@ This image was created to be an alternative to [**tiangolo/uwsgi-nginx**](https:
 
 And to be the base of [**tiangolo/meinheld-gunicorn-flask**](https://github.com/tiangolo/meinheld-gunicorn-flask-docker).
 
-## 🚨 WARNING: You Probably Don't Need this Docker Image
+## 🚨 DEPRECATION WARNING
 
 You are probably using **Kubernetes** or similar tools. In that case, you probably **don't need this image** (or any other **similar base image**). You are probably better off **building a Docker image from scratch**.
 
@@ -120,31 +114,21 @@ CMD ["gunicorn", "--conf", "app/gunicorn_conf.py", "--bind", "0.0.0.0:80", "app.
 
 You can read more about these ideas in the [FastAPI documentation about: FastAPI in Containers - Docker](https://fastapi.tiangolo.com/deployment/docker/#replication-number-of-processes) as the same ideas would apply to other web applications in containers.
 
-## When to Use this Docker Image
+[Meinheld](https://github.com/mopemope/meinheld) has not being actively maintained in the past years.
 
-### A Simple App
+The current latest version of Meinheld released is 1.0.2, from May 17, 2020. This version of Meinheld requires an old version of Greenlet (`>=0.4.5,<0.5`) that is not compatible with Python 3.10 and 3.11, the last version compatible was Python 3.9.
 
-You could want a process manager running multiple worker processes in the container if your application is **simple enough** that you don't need (at least not yet) to fine-tune the number of processes too much, and you can just use an automated default, and you are running it on a **single server**, not a cluster.
+[Python 3.9 now reached its End Of Life](https://devguide.python.org/versions/). So, there is currently no feasible way to use this Docker image.
 
-### Docker Compose
+Additionally, most of my time is now dedicated to [FastAPI](https://fastapi.tiangolo.com/) and friends.
 
-You could be deploying to a **single server** (not a cluster) with **Docker Compose**, so you wouldn't have an easy way to manage replication of containers (with Docker Compose) while preserving the shared network and **load balancing**.
-
-Then you could want to have **a single container** with a **process manager** starting **several worker processes** inside, as this Docker image does.
-
-### Prometheus and Other Reasons
-
-You could also have **other reasons** that would make it easier to have a **single container** with **multiple processes** instead of having **multiple containers** with **a single process** in each of them.
-
-For example (depending on your setup) you could have some tool like a Prometheus exporter in the same container that should have access to **each of the requests** that come.
-
-In this case, if you had **multiple containers**, by default, when Prometheus came to **read the metrics**, it would get the ones for **a single container each time** (for the container that handled that particular request), instead of getting the **accumulated metrics** for all the replicated containers.
-
-Then, in that case, it could be simpler to have **one container** with **multiple processes**, and a local tool (e.g. a Prometheus exporter) on the same container collecting Prometheus metrics for all the internal processes and exposing those metrics on that single container.
+Because of all that, this Docker image is no longer supported.
 
 ---
 
-Read more about it all in the [FastAPI documentation about: FastAPI in Containers - Docker](https://fastapi.tiangolo.com/deployment/docker/), as the same concepts apply to other web applications in containers.
+## Historical Docs
+
+The rest of the README is preserved mainly for historical reasons.
 
 ## How to use
 
