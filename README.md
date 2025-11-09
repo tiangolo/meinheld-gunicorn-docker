@@ -441,6 +441,7 @@ All the image tags, configurations, environment variables and application option
 
 #### Internal
 
+* ⬆ Bump actions/checkout from 4 to 5. PR [#143](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/143) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump tiangolo/latest-changes from 0.3.2 to 0.4.0. PR [#142](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/142) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump tiangolo/latest-changes from 0.3.1 to 0.3.2. PR [#140](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/140) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔥 Remove unused files. PR [#139](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/139) by [@tiangolo](https://github.com/tiangolo).
