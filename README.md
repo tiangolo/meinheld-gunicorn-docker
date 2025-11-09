@@ -20,7 +20,7 @@ This Docker image is now deprecated. Read about it below.
 
 The last date tags for these versions are:
 
-* `python3.9-2025-04-14`
+* `python3.9-2025-11-09`
 * `python3.9-alpine3.13-2024-03-11`
 * `python3.8-2024-11-02`
 * `python3.8-alpine3.11-2024-03-11`
