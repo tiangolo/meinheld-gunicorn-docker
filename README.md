@@ -423,6 +423,10 @@ All the image tags, configurations, environment variables and application option
 
 * ♻️ Do not add `EXPOSE 80` by default as the port can be changed. PR [#128](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/128) by [@tiangolo](https://github.com/tiangolo).
 
+#### Docs
+
+* 📝 Add deprecation notice. PR [#147](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/147) by [@tiangolo](https://github.com/tiangolo).
+
 #### Internal
 
 * ⬆ Bump tiangolo/issue-manager from 0.5.1 to 0.6.0. PR [#145](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/145) by [@dependabot[bot]](https://github.com/apps/dependabot).
