@@ -441,6 +441,7 @@ All the image tags, configurations, environment variables and application option
 
 #### Internal
 
+* ⬆ Bump tiangolo/issue-manager from 0.5.1 to 0.6.0. PR [#145](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/145) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump peter-evans/dockerhub-description from 4 to 5. PR [#146](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/146) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump actions/setup-python from 5 to 6. PR [#144](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/144) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump actions/checkout from 4 to 5. PR [#143](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/143) by [@dependabot[bot]](https://github.com/apps/dependabot).
