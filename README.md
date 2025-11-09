@@ -421,6 +421,7 @@ All the image tags, configurations, environment variables and application option
 
 #### Docs
 
+* 📝 Update last uploaded tag. PR [#150](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/150) by [@tiangolo](https://github.com/tiangolo).
 * 📝 Update docs and deprecations. PR [#148](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/148) by [@tiangolo](https://github.com/tiangolo).
 * 📝 Add deprecation notice. PR [#147](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/147) by [@tiangolo](https://github.com/tiangolo).
 
