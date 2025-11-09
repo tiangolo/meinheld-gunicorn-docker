@@ -441,6 +441,7 @@ All the image tags, configurations, environment variables and application option
 
 #### Internal
 
+* ⬆ Bump peter-evans/dockerhub-description from 4 to 5. PR [#146](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/146) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump actions/setup-python from 5 to 6. PR [#144](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/144) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump actions/checkout from 4 to 5. PR [#143](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/143) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump tiangolo/latest-changes from 0.3.2 to 0.4.0. PR [#142](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/142) by [@dependabot[bot]](https://github.com/apps/dependabot).
