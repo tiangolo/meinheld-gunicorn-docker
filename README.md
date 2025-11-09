@@ -4,16 +4,11 @@ This Docker image is now deprecated. Read about it below.
 
 ---
 
-[![Test](https://github.com/tiangolo/meinheld-gunicorn-docker/actions/workflows/test.yml/badge.svg)](https://github.com/tiangolo/meinheld-gunicorn-docker/actions/workflows/test.yml) [![Deploy](https://github.com/tiangolo/meinheld-gunicorn-docker/workflows/Deploy/badge.svg)](https://github.com/tiangolo/meinheld-gunicorn-docker/actions?query=workflow%3ADeploy)
-
-## Supported tags and respective `Dockerfile` links
-
-* [`python3.9`, `latest` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/docker-images/python3.9.dockerfile)
-
 ## Deprecated tags
 
 🚨 These tags are no longer supported or maintained, they are removed from the GitHub repository, but the last versions pushed might still be available in Docker Hub if anyone has been pulling them:
 
+* `python3.9`
 * `python3.9-alpine3.13`
 * `python3.8`
 * `python3.8-alpine3.11`
@@ -25,6 +20,7 @@ This Docker image is now deprecated. Read about it below.
 
 The last date tags for these versions are:
 
+* `python3.9-2025-04-14`
 * `python3.9-alpine3.13-2024-03-11`
 * `python3.8-2024-11-02`
 * `python3.8-alpine3.11-2024-03-11`
@@ -48,13 +44,9 @@ The last date tags for these versions are:
 
 ## Description
 
-Python web applications running with **Meinheld** controlled by **Gunicorn** have some of the [best performances achievable by (older) Python frameworks](https://www.techempower.com/benchmarks/#section=test&runid=a979de55-980d-4721-a46f-77298b3f3923&hw=ph&test=fortune&l=zijzen-7) based on WSGI (synchronous code, instead of ASGI, which is asynchronous) (*).
+Python web applications running with **Meinheld** controlled by **Gunicorn** have some of the [best performances achievable by (older) Python frameworks](https://www.techempower.com/benchmarks/#section=test&runid=a979de55-980d-4721-a46f-77298b3f3923&hw=ph&test=fortune&l=zijzen-7) based on WSGI (synchronous code, instead of ASGI, which is asynchronous).
 
 This applies to frameworks like **Flask** and **Django**.
-
-If you have an already existing application in Flask, Django, or similar frameworks, this image will give you the best performance possible (or close to that).
-
-This image has an "auto-tuning" mechanism included, so that you can just add your code and get **good performance** automatically. And without making sacrifices (like logging).
 
 ## Technical Details
 
@@ -68,7 +60,7 @@ You can use **Gunicorn** to manage Meinheld and run multiple processes of it.
 
 ## Alternatives
 
-This image was created to be an alternative to [**tiangolo/uwsgi-nginx**](https://github.com/tiangolo/uwsgi-nginx-docker), providing about 400% the performance of that image.
+This image was created to be an alternative to [**tiangolo/uwsgi-nginx**](https://github.com/tiangolo/uwsgi-nginx-docker).
 
 And to be the base of [**tiangolo/meinheld-gunicorn-flask**](https://github.com/tiangolo/meinheld-gunicorn-flask-docker).
 
@@ -99,7 +91,7 @@ threads = 3
 And then you could have a `Dockerfile` with:
 
 ```Dockerfile
-FROM python:3.9
+FROM python:3.14
 
 WORKDIR /code
 
@@ -114,15 +106,15 @@ CMD ["gunicorn", "--conf", "app/gunicorn_conf.py", "--bind", "0.0.0.0:80", "app.
 
 You can read more about these ideas in the [FastAPI documentation about: FastAPI in Containers - Docker](https://fastapi.tiangolo.com/deployment/docker/#replication-number-of-processes) as the same ideas would apply to other web applications in containers.
 
-[Meinheld](https://github.com/mopemope/meinheld) has not being actively maintained in the past years.
+[Meinheld](https://github.com/mopemope/meinheld) has not been actively maintained in the past years.
 
 The current latest version of Meinheld released is 1.0.2, from May 17, 2020. This version of Meinheld requires an old version of Greenlet (`>=0.4.5,<0.5`) that is not compatible with Python 3.10 and 3.11, the last version compatible was Python 3.9.
 
-[Python 3.9 now reached its End Of Life](https://devguide.python.org/versions/). So, there is currently no feasible way to use this Docker image.
+[Python 3.9 reached its End Of Life](https://devguide.python.org/versions/). So, there is currently no feasible way to use Meinheld.
 
 Additionally, most of my time is now dedicated to [FastAPI](https://fastapi.tiangolo.com/) and friends.
 
-Because of all that, this Docker image is no longer supported.
+Because of all that, this Docker image is no longer supported. ☕️
 
 ---
 
